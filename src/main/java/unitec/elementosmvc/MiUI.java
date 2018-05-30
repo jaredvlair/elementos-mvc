@@ -9,6 +9,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
@@ -28,11 +29,16 @@ public class MiUI extends UI {
         Label etiqueta=new Label("bienvenido a mi aplicacion"); 
         etiqueta.addStyleName(ValoTheme.LABEL_H2);
         
-        Button boton=new Button("Ingresasr ya !!");
+        //METER CAMPO DE TEXTO
+        TextField texto=new TextField();
+        texto.setPlaceholder("CUERPO MENSAJE");
+        Button boton=new Button("GUARDAR MENSAJE");
         boton.addStyleName(ValoTheme.BUTTON_DANGER);
         //agregamos la etiueta y el boton a el layout 
         layout.addComponent(etiqueta);
         layout.addComponent(boton);
+        layout.addComponent(texto);
+        
         
         //finalmente agregamos el layout al contenedor principal de init
         setContent(layout);

@@ -12,5 +12,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author Jared
  */
 public interface RepositorioMensaje extends MongoRepository<Mensaje, String> {
+    public Mensaje findByCuerpo(String cuerpo);
     
 }
