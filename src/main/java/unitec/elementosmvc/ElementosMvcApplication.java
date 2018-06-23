@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ElementosMvcApplication implements CommandLineRunner{
     
-    @Autowired ServicioTarjeta servicio;
-    @Autowired RepositorioMensaje repoMensaje;
+   @Autowired ServicioTarjeta servicio;
+   @Autowired RepositorioMensaje repoMensaje;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ElementosMvcApplication.class, args);
